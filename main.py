@@ -164,7 +164,7 @@ async def inviteme(ctx):
 
 #invit people to this server
 @bot.command()
-async def invitesl(ctx):
+async def invitetsl(ctx):
     await ctx.send("discord.gg/jkvSmERk8x")
     print("Command issued")
     print("Waiting for next command")
