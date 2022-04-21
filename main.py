@@ -200,7 +200,15 @@ async def memes(ctx):
     print("Waiting for next command")
 
 
-#now wait for the code to be checked (cooldown)    
+#code
+@bot.command()
+async def code(ctx):
+    await ctx.send("https://github.com/Sweacy/Discord-Bot")
+    print("Command issued")
+    print("Waiting for next command")
+
+
+#now wait for the code to be checked (cooldown)
 time.sleep(1)
 
 keep_alive()
