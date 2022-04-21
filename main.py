@@ -183,6 +183,20 @@ async def motd(ctx):
     print("Waiting for next command")
 
 
+#memes
+@bot.command()
+async def memes(ctx):
+    memes_responses = [
+        "https://img.delicious.com.au/WqbvXLhs/del/2016/06/more-the-merrier-31380-2.jpg",
+        "https://img.delicious.com.au/qfIYdLC4/del/2016/06/makeitdelicious-31357-2.jpg",
+        "https://img.delicious.com.au/wZSpIX-q/del/2016/06/clean-eating-31359-2.jpg",
+    ]
+    await ctx.send(f'{random.choice(memes_responses)}')
+    print("Command issued")
+    print("Waiting for next command")
+
+
 keep_alive()
 token = os.environ['TOKEN']
 bot.run(token)
+
