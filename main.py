@@ -6,17 +6,6 @@ from webserver import keep_alive
 
 bot = commands.Bot(command_prefix="?")
 
-
-#commands list
-@bot.command()
-async def cmdlist(ctx):
-    await ctx.send(
-        "cmdlist(list all cmds), hi(say hi to the boy), rules(tell u where to find to rules), pingme(ping the person executing the command), botinfo(tell u this bot's info), money(ask the bot for money), jokes(tell u a joke), gamble(gamble, but no money needed), classes(list all classes the bot provides)"
-    )
-    print("Command issued")
-    print("Waiting for next command")
-
-
 #hi
 @bot.command()
 async def hi(ctx):
@@ -118,7 +107,7 @@ async def bye(ctx):
 #random cmd
 @bot.command()
 async def randomcmd(ctx):
-  cmd_responses = ['hi', 'bye', 'pingme', 'botinfo', 'money', 'jokes', 'gamble', 'classes', 'swear',]
+  cmd_responses = ['hi', 'bye', 'pingme', 'botinfo', 'money', 'jokes', 'gamble', 'classes', 'swear', 'eightball',]
   await ctx.send(f'{random.choice(cmd_responses)}')
   print("Command issued")
   print("Waiting for next command")
@@ -128,6 +117,22 @@ async def randomcmd(ctx):
 async def swear(ctx):
   swear_responses = ['You are not allowed to swear', 'I wont swear L', 'I dont know what to say....']
   await ctx.send(f'{random.choice(swear_responses)}')
+  print("Command issued")
+  print("Waiting for next command")
+
+#8ball
+@bot.command()
+async def eightball(ctx):
+  ball_responses = ['Yes', 'No', 'Maybe', 'I dont understand',]
+  await ctx.send(f'{random.choice(ball_responses)}')
+  print("Command issued")
+  print("Waiting for next command")
+
+#randomnum
+@bot.command()
+async def randomnum(ctx):
+  num_responses = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10',]
+  await ctx.send(f'{random.choice(num_responses)}')
   print("Command issued")
   print("Waiting for next command")
 
