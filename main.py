@@ -162,10 +162,23 @@ async def inviteme(ctx):
     print("Waiting for next command")
 
 
-#invit people to this server
+#invite people to this server
 @bot.command()
 async def invitetsl(ctx):
     await ctx.send("discord.gg/jkvSmERk8x")
+    print("Command issued")
+    print("Waiting for next command")
+
+
+#random motd
+@bot.command()
+async def motd(ctx):
+    motd_responses = [
+        'Welcome back!',
+        'Rain is rain, you cant do much about it lmfao',
+        'Spicy fud = amazing',
+    ]
+    await ctx.send(f'{random.choice(motd_responses)}')
     print("Command issued")
     print("Waiting for next command")
 
