@@ -108,6 +108,19 @@ async def class_hi(ctx):
     print("Command issued")
     print("Waiting for next command")
 
+#bye
+@bot.command()
+async def bye(ctx):
+  await ctx.send("umm, bye? I guess?")
+  print("Command issued")
+  print("Waiting for next command")
+
+#random cmd
+async def randomcmd(ctx):
+  cmd_responses = ['hi', 'bye', 'pingme', 'botinfo', 'money', 'jokes', 'gamble', 'classes',]
+  await ctx.send(f'{random.choice(cmd_responses)}')
+  print("Command issued")
+  print("Waiting for next command")
 
 keep_alive()
 token = os.environ['TOKEN']
