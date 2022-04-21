@@ -208,9 +208,6 @@ async def code(ctx):
     print("Waiting for next command")
 
 
-#now wait for the code to be checked (cooldown)
-time.sleep(1)
-
 keep_alive()
 token = os.environ['TOKEN']
 bot.run(token)
