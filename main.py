@@ -6,6 +6,7 @@ from webserver import keep_alive
 
 bot = commands.Bot(command_prefix="?")
 
+
 #hi
 @bot.command()
 async def hi(ctx):
@@ -97,44 +98,61 @@ async def class_hi(ctx):
     print("Command issued")
     print("Waiting for next command")
 
+
 #bye
 @bot.command()
 async def bye(ctx):
-  await ctx.send("umm, bye? I guess?")
-  print("Command issued")
-  print("Waiting for next command")
+    await ctx.send("umm, bye? I guess?")
+    print("Command issued")
+    print("Waiting for next command")
 
-#random cmd
-@bot.command()
-async def randomcmd(ctx):
-  cmd_responses = ['hi', 'bye', 'pingme', 'botinfo', 'money', 'jokes', 'gamble', 'classes', 'swear', 'eightball',]
-  await ctx.send(f'{random.choice(cmd_responses)}')
-  print("Command issued")
-  print("Waiting for next command")
 
 #swear
 @bot.command()
 async def swear(ctx):
-  swear_responses = ['You are not allowed to swear', 'I wont swear L', 'I dont know what to say....']
-  await ctx.send(f'{random.choice(swear_responses)}')
-  print("Command issued")
-  print("Waiting for next command")
+    swear_responses = [
+        'You are not allowed to swear', 'I wont swear L',
+        'I dont know what to say....'
+    ]
+    await ctx.send(f'{random.choice(swear_responses)}')
+    print("Command issued")
+    print("Waiting for next command")
+
 
 #8ball
 @bot.command()
 async def eightball(ctx):
-  ball_responses = ['Yes', 'No', 'Maybe', 'I dont understand',]
-  await ctx.send(f'{random.choice(ball_responses)}')
-  print("Command issued")
-  print("Waiting for next command")
+    ball_responses = [
+        'Yes',
+        'No',
+        'Maybe',
+        'I dont understand',
+    ]
+    await ctx.send(f'{random.choice(ball_responses)}')
+    print("Command issued")
+    print("Waiting for next command")
+
 
 #randomnum
 @bot.command()
 async def randomnum(ctx):
-  num_responses = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10',]
-  await ctx.send(f'{random.choice(num_responses)}')
-  print("Command issued")
-  print("Waiting for next command")
+    num_responses = [
+        '0',
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        '10',
+    ]
+    await ctx.send(f'{random.choice(num_responses)}')
+    print("Command issued")
+    print("Waiting for next command")
+
 
 keep_alive()
 token = os.environ['TOKEN']
