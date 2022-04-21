@@ -8,7 +8,7 @@ app = Flask('')
 @app.route('/')
 def home():
 
-    return "The bot is running"
+    return "The bot is active, check console for errors"
 
 
 def run():
