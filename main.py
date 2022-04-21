@@ -154,6 +154,22 @@ async def randomnum(ctx):
     print("Waiting for next command")
 
 
+#invite the bot
+@bot.command()
+async def inviteme(ctx):
+    await ctx.send("Please dm Sweacy#2966")
+    print("Command issued")
+    print("Waiting for next command")
+
+
+#invit people to this server
+@bot.command()
+async def invitesl(ctx):
+    await ctx.send("discord.gg/jkvSmERk8x")
+    print("Command issued")
+    print("Waiting for next command")
+
+
 keep_alive()
 token = os.environ['TOKEN']
 bot.run(token)
