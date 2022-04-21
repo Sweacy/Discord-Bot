@@ -1,6 +1,7 @@
 import os
 import discord
 import random
+import time
 from discord.ext import commands
 from webserver import keep_alive
 
@@ -190,13 +191,18 @@ async def memes(ctx):
         "https://img.delicious.com.au/WqbvXLhs/del/2016/06/more-the-merrier-31380-2.jpg",
         "https://img.delicious.com.au/qfIYdLC4/del/2016/06/makeitdelicious-31357-2.jpg",
         "https://img.delicious.com.au/wZSpIX-q/del/2016/06/clean-eating-31359-2.jpg",
+        "https://img.delicious.com.au/NCmnqPz3/del/2016/06/urban-warrior-31363-2.jpg",
+        "https://img.delicious.com.au/kFRGtVJ8/del/2016/06/every-kid-can-relate-31368-2.jpg",
+        "https://img.delicious.com.au/b5xmntR2/del/2016/06/can-i-add-bacon-to-thaty-31369-2.jpg",
     ]
     await ctx.send(f'{random.choice(memes_responses)}')
     print("Command issued")
     print("Waiting for next command")
 
 
+#now wait for the code to be checked (cooldown)    
+time.sleep(1)
+
 keep_alive()
 token = os.environ['TOKEN']
 bot.run(token)
-
