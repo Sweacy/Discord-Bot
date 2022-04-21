@@ -116,6 +116,7 @@ async def bye(ctx):
   print("Waiting for next command")
 
 #random cmd
+@bot.command()
 async def randomcmd(ctx):
   cmd_responses = ['hi', 'bye', 'pingme', 'botinfo', 'money', 'jokes', 'gamble', 'classes',]
   await ctx.send(f'{random.choice(cmd_responses)}')
