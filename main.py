@@ -118,8 +118,16 @@ async def bye(ctx):
 #random cmd
 @bot.command()
 async def randomcmd(ctx):
-  cmd_responses = ['hi', 'bye', 'pingme', 'botinfo', 'money', 'jokes', 'gamble', 'classes',]
+  cmd_responses = ['hi', 'bye', 'pingme', 'botinfo', 'money', 'jokes', 'gamble', 'classes', 'swear',]
   await ctx.send(f'{random.choice(cmd_responses)}')
+  print("Command issued")
+  print("Waiting for next command")
+
+#swear
+@bot.command()
+async def swear(ctx):
+  swear_responses = ['You are not allowed to swear', 'I wont swear L', 'I dont know what to say....']
+  await ctx.send(f'{random.choice(swear_responses)}')
   print("Command issued")
   print("Waiting for next command")
 
